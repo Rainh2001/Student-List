@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,600,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Asap;
+}
+#container {
+    width: 60%;
+    margin: auto;
+}
+#wrap{
+    margin-top: 50px;
+    border: solid 5px lightgrey;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.entry-box {
+    display: inline-block;
+    margin-right: 20px;
+}
+.btn {
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+}
+#query-section {
+    margin-top: 20px;
+}
+#student-info {
+    margin-top: 20px;
+}
+#student-list {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-top: 10px;
+}
+#view-list {
+    display: inline-block;
+}
+textarea {
+    resize: none;
+    width: 148px;
+}

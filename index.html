@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+    
+        <div id="container">
+            <div id="wrap">
+                <div id="data-entry">
+
+                    <h3>Enter Student Details</h3>
+                    <br />
+                    <div class="entry-box">
+                        <p>First Name</p>
+                         <textarea id="first-name" placeholder="Nev"></textarea>
+                    </div>
+                    <div class="entry-box">
+                        <p>Last Name</p>
+                        <textarea id="last-name" placeholder="Goodyer"></textarea>
+                    </div>
+                    <div class="entry-box">
+                        <p>Date of Birth</p>
+                        <textarea id="dob"></textarea>
+                    </div>
+                    <div class="entry-box">
+                        <p>Gender</p>
+                        <textarea id="gender" placeholder="m"></textarea>
+                    </div>
+                    <div class="entry-box">
+                        <p>Average Mark</p>
+                        <textarea id="avg-mark" placeholder="100"></textarea>
+                    </div>
+
+                    <br />
+                    <button class="btn" type="button" onclick="addStudent()">Add Student</button>
+
+                    <div id="query-section">
+                        <h3>Find Student via Surname</h3>
+                        <br />
+                        <textarea id="query" placeholder="Goodyer"></textarea>
+                        <br />
+                        <button onclick="findStudent()" class="btn" type="button">Find Student</button>
+                    </div>
+
+                </div>
+
+                <div id="student-info">
+                    <h3>List of Students</h3>
+                    <button class="btn" type="button" onclick="printStudents()">View List</button>
+                    <textarea id="student-list" rows="10"></textarea>
+                </div>
+            </div>
+        </div>   
+    </body>
+</html>
