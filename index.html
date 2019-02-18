@@ -15,44 +15,71 @@
                     <br />
                     <div class="entry-box">
                         <p>First Name</p>
-                         <textarea id="first-name" placeholder="Nev"></textarea>
+                         <textarea id="first-name" placeholder="(John)"></textarea>
                     </div>
                     <div class="entry-box">
                         <p>Last Name</p>
-                        <textarea id="last-name" placeholder="Goodyer"></textarea>
-                    </div>
-                    <div class="entry-box">
-                        <p>Date of Birth</p>
-                        <textarea id="dob"></textarea>
-                    </div>
-                    <div class="entry-box">
-                        <p>Gender</p>
-                        <textarea id="gender" placeholder="m"></textarea>
+                        <textarea id="last-name" placeholder="(Doe)"></textarea>
                     </div>
                     <div class="entry-box">
                         <p>Average Mark</p>
-                        <textarea id="avg-mark" placeholder="100"></textarea>
+                        <textarea id="avg-mark" placeholder="(0-100)"></textarea>
                     </div>
-
+                    <div id="drop-list-area">
+                        <div class="drop-down">
+                            <p>Date of Birth</p>
+                            <select id="day">
+                                <option value="" disabled selected>(dd)</option>
+                            </select>
+                            <select id="month">
+                                <option value="" disabled selected>(mm)</option>
+                            </select>
+                            <select id="year">
+                                <option value="" disabled selected>(yyyy)</option>
+                            </select>
+                        </div>
+                        <div class="drop-down">
+                            <p>Gender</p>
+                            <select id="gender" placeholder="male">
+                                <option value="" disabled selected>Please select gender</option>
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </div>
+                    </div>
                     <br />
                     <button class="btn" type="button" onclick="addStudent()">Add Student</button>
-
+                    <span id="required">* Enter all fields to add a new student</span>    
+                    
                     <div id="query-section">
                         <h3>Find Student via Surname</h3>
                         <br />
-                        <textarea id="query" placeholder="Goodyer"></textarea>
+                        <textarea id="query" placeholder="Doe"></textarea>
+                        <span id="not-found">* No student with that last name</span>
                         <br />
-                        <button onclick="findStudent()" class="btn" type="button">Find Student</button>
+                        <button onclick="selectStudent()" class="btn" type="button" id="select">Select Student</button>
+                        <button onclick="removeStudent()" class="btn" type="button" id="remove" disabled>Remove Student</button>
+                        <button onclick="editStudent()" class="btn" type="button" id="edit" disabled>Edit Student</button>
                     </div>
 
                 </div>
 
                 <div id="student-info">
-                    <h3>List of Students</h3>
+                    <h3>List of Students</h3>   
                     <button class="btn" type="button" onclick="printStudents()">View List</button>
-                    <textarea id="student-list" rows="10"></textarea>
+                    <table id="student-list">
+                        <tr>
+                            <th>Student Number</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Average Mark</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                        </tr>
+                    </table>
                 </div>
             </div>
-        </div>   
+        </div> 
     </body>
 </html>
